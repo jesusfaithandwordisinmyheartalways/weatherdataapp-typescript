@@ -51,7 +51,7 @@ import Rain from '../images/rain icon.png';
                 if(city.trim()) {
                     const fetchWeather = async () => {
                         try {
-                            const API_KEY = 'd72f24843e99515a53471228c5cc3502';
+                            const API_KEY = '';
                             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`);
                             if(!response.ok) {
                                 throw new Error('unable to fetch data')
