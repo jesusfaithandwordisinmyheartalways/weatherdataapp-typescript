@@ -1,3 +1,46 @@
+Overview:
+Weather application to sync weather data from different cities from user input. User has ability to see different features from the Open Weather API. Laptop and mobile screen layout
+Features:
+* User Input to sync weather data from different cities
+* mobile screen designed also
+* fetch API
+
+
+
+
+
+
+
+SCREENSHOTS:
+
+![weather app screenshot](https://github.com/user-attachments/assets/d48fdc32-c2a9-4c5c-876f-5b4bb458cf52)
+
+
+
+![weather app screenshot2](https://github.com/user-attachments/assets/84ae7d6f-52f7-49f2-a5b8-583c7af8d6cc)
+
+![weather app screenshot3](https://github.com/user-attachments/assets/34c91b74-0a03-4447-a0bd-6f34e879deb4)
+
+
+
+![weather app screenshot4](https://github.com/user-attachments/assets/61bbe2fb-4aaa-49f8-b71a-da21a3628bc8)
+
+
+
+Contact : Andrew Johnson andrewjohnson9393@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
