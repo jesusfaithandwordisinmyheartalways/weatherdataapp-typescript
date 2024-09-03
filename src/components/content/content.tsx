@@ -14,6 +14,7 @@ import CloudyImage from '../images/Cloudy image icon.jpg';
 import OvercastClouds from '../images/overcast clouds image.png';
 import NormalWeather from '../images/normal weather.png';
 import Rain from '../images/rain icon.png';
+import { Link } from "react-router-dom";
 
 
 
@@ -46,12 +47,37 @@ import Rain from '../images/rain icon.png';
             const [city, setCity] = useState<string>('');
             const [weather, setWeather] = useState<WeatherData | null>(null);
             const [error, setError] = useState<string | null>(null);
+            const [button, setButton] = useState([''])
+            const [londonButton, setLondonBtn] = useState([''])
+            const [portlandButton, setPortlandButton] = useState([''])
+            const [parisButton, setParisButton] = useState([''])
+            const [torontoButton, setTorontoButton] = useState([''])
 
+            useEffect(() => {
+                let NY:string[] = ['New York City, NY'];
+                setButton(NY);
+                let LondonBTN:string[] = ['London, UK']
+                setLondonBtn(LondonBTN);
+                let PortlandBTN:string[] = ['Portland, OR']
+                setPortlandButton(PortlandBTN);
+                let ParisBTN:string[] = ['Paris, FR']
+                setParisButton(ParisBTN);
+                let TorontoBTN:string[] = ['Toronto, CA'];
+                setTorontoButton(TorontoBTN);
+
+
+            }, [])
+
+
+
+
+      
+           
             useEffect(() => {
                 if(city.trim()) {
                     const fetchWeather = async () => {
                         try {
-                            const API_KEY = '';
+                            const API_KEY = 'd72f24843e99515a53471228c5cc3502';
                             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`);
                             if(!response.ok) {
                                 throw new Error('unable to fetch data')
@@ -97,11 +123,21 @@ import Rain from '../images/rain icon.png';
                       <div className="content-left-header"><div><h3>Popular Cities</h3></div></div>
 
                       <div className="content-left-buttons">
-                        <div> <button type="button">Paris, France</button></div>
-                        <div><button>New York City, NY</button></div>
-                        <div> <button>London. UK</button></div>
-                        <div><button>Los Angeles, CA</button></div>
-                        <div><button>Toronto, CA</button></div>
+                      <div>{button && (
+                        <Link to="/newyork"><div><button>{button}</button></div></Link>
+                      )}</div>
+                        <div> {londonButton && (
+                           <Link to="/london"><div><button>{londonButton}</button></div></Link>
+                        )}</div>
+                        <div>{portlandButton && (
+                          <Link to="/portland"><div><button>{portlandButton}</button></div></Link>
+                        )}</div>
+                        <div>{parisButton && (
+                           <Link to="/paris"><div><button>{parisButton}</button></div></Link>
+                        )}</div>
+                        <div>{torontoButton && (
+                            <Link to="/toronto"><div><button>{torontoButton}</button></div></Link>
+                        )}</div>
                       </div>
 
                     </div>
@@ -168,7 +204,7 @@ import Rain from '../images/rain icon.png';
 
                          <div className="content-humidity-wind-info">
                             { weather && weather.main && weather.main.humidity && (
-                                <div><div><h3>{weather.main.humidity} <span><img src={Humidity}></img></span> </h3></div></div>
+                                <div><div><h3>{weather.main.humidity + "%"} <span><img src={Humidity}></img></span> </h3></div></div>
                             )}
 
                             { weather && weather.wind && weather.wind.speed && (

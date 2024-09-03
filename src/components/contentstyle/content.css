@@ -42,19 +42,25 @@ body {
 .Content {
     width: 100%;
     overflow: hidden;
-    margin-block:0px
+    margin-block:0px;
 }
 
 
 .Content-Wrapper {
-    display: grid;
-    grid-template-columns: auto auto;
-    align-content:center;
-    justify-content: space-around;
-    margin:0 auto;
-    max-width: 2000px;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin:0 auto;
+  max-width: 2000px;
+  margin-top: 110px;
 
+
+}
+
+.content-right {
+    width:70vw;
+    text-align: center;
+    margin-top:-110px;
 }
 
 
@@ -62,8 +68,7 @@ body {
   background-color: var(--black);
   text-align: center;
   height: 525px;
-  width: 350px;
-  margin-left:-190px;
+  width: 30vw;
   visibility: visible;
 }
 
@@ -73,11 +78,12 @@ body {
 
 
 .content-left input {
-    padding:0.6em 4.2em;
+    padding:0.6em 6.5em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
     text-align: center;
     border-radius: 3px;
+   
 
 }
 
@@ -109,7 +115,7 @@ body {
 
 
 .content-left-buttons button:hover {
-    color:var(--seagreen)
+    color:dodgerblue
 }
 
 
@@ -159,8 +165,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-content:center;
     justify-content: space-around;
-    margin-block:60px;
-    gap:90px
+    margin-block:30px;
+    gap:90px;
 }
 
 
@@ -172,8 +178,10 @@ body {
     font-size: 1rem;
 }
 
+
+
 .content-humidity-wind-info {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: "Gupter", serif;
     font-weight: 400;
 
@@ -181,7 +189,7 @@ body {
 
 
 .content-humidity-wind-info img {
-    width: 25px;
+    width: 20px;
     object-fit: contain;
     margin:0px 10px
 }
@@ -205,6 +213,17 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /*-------------MOBILE SCREEN 320PX & 420PX-------------*/
     @media screen and (min-width:320px) and (max-width:420px) {
 
@@ -217,12 +236,12 @@ body {
 
 
     .Content-Wrapper {
-      display: grid;
-      grid-template-columns: auto;
-      align-content:center;
-      justify-content: center;
+     display: flex;
+     align-items:center;
+     justify-content: center;
+     flex-direction: column;
       margin:0 auto;
-      max-width: 2000px;
+      max-width: 550px;
       text-align: center;
   }
 
@@ -231,7 +250,7 @@ body {
     background-color: var(--black);
     text-align: center;
     height: 525px;
-    width: 430px;
+    width: 100vw;
     margin-left:0px;
     margin-block:0px;
     visibility: visible;
@@ -240,7 +259,7 @@ body {
 
 
   .content-left input {
-    padding:0.6em 6.4em;
+    padding:1.5em 6.4em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
     text-align: center;
@@ -256,6 +275,10 @@ body {
     color:var(--white);
 
 
+}
+
+.content-right {
+    margin-top: 20px;
 }
   
 
@@ -314,7 +337,7 @@ body {
 }
 
 .content-humidity-wind-info {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "Gupter", serif;
     font-weight: 400;
 

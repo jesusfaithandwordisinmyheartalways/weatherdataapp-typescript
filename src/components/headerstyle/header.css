@@ -40,7 +40,10 @@ body {
 .Header-Container {
     overflow: hidden;
     width: 100%;
-    background-color:var(--purple);
+    background:url('../images/weaather .jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding:3em
 }
 

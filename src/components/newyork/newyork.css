@@ -1,0 +1,291 @@
+
+
+
+
+
+
+:root {
+    --white:white;
+    --dblue:dodgerblue;
+    --black: black;
+}
+
+
+
+* {
+    box-sizing:border-box
+}
+
+
+body {
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------NY HEADER CONTAINER------------------*/
+
+.NY-Header-Container {
+    width: 100%;
+    overflow: hidden;
+    height: 410px;
+    background:url('../images/nybackground.jpg');
+    background-attachment: local;
+    background-size: cover;
+    background-position: center center;
+    animation-name:nyWeather;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: animation 9s linear;
+
+}
+
+@keyframes nyWeather {
+    0% {
+        background:url('../images/nybackground.jpg');
+         background-attachment: local;
+         background-size: cover;
+         background-position:center center;
+    }
+    50% {
+        background:url('../images/nybackgroundimagetwo.jpg');
+        background-attachment: local;
+        background-size: cover;
+        background-position: top center;
+    }
+
+    100% {
+        background:url('../images/nyBackgroundThree.jpg');
+        background-attachment: local;
+        background-size: cover;
+        background-position: center center;
+
+    }
+    }
+
+
+
+
+
+
+
+
+
+    /*----------------------------CONTENT ANIMATION ------------------------------------------*/
+
+        .Main-Content {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .Main-Wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: space-around;
+            margin:0 auto;
+            max-width: 1300px;
+            gap:10px;
+            text-align: center;
+        }
+
+
+
+
+/*-------------------------CONTENT--------------------------*/
+
+
+
+
+
+    .NY-Content-Container {
+        width:100%;
+        overflow: hidden;
+        visibility: visible;
+
+
+    }
+
+
+
+
+
+.NY-Content-Wrapper {
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    height:310px;
+    margin:0 auto;
+    max-width: 1500px;
+    background:white;
+
+}
+
+
+.NY-Content-Wrapper h3 {
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+
+.NY-Content-Wrapper img {
+    mix-blend-mode: multiply;
+    background:transparent;
+    width:310px;
+    animation-name: nyState;
+    animation-direction:alternate;
+    animation-timing-function:linear;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes nyState {
+    0%{transform: rotateX(0deg);}
+    100%{transform: rotateY(110deg);}
+}
+
+
+
+
+
+
+
+
+
+/*----------------------------CONTENT------------------------------------------*/
+
+.Content-Container {
+    width:100%;
+    overflow: hidden;
+}
+
+
+
+.Content-Wrapper {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    margin:0 auto;
+    max-width: 2000px;
+
+}
+
+
+.Content-Wrapper h3 {
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.Content-Wrapper p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+
+
+
+.Content-Wrapper-Two {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    margin:0 auto;
+    max-width: 1000px;
+
+}
+
+
+
+.Content-Wrapper-Two h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+}
+
+
+.Content-Wrapper-Two p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------MOBILE SCREEN------------------------------------------*/
+
+
+
+
+
+@media screen and (min-width:320px) and (max-width:420px) {
+
+
+
+.NY-Content-Wrapper {
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    height:310px;
+    margin:0 auto;
+    max-width: 1000px;
+    background:white;
+
+}
+
+
+.NY-Content-Wrapper h3 {
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+
+.NY-Content-Wrapper img {
+    mix-blend-mode: multiply;
+    background:transparent;
+    width:210px;
+    animation-name: nyState;
+    animation-direction:alternate;
+    animation-timing-function:linear;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+}
